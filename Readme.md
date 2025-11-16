@@ -5,6 +5,9 @@
 A simple CRUD notes application built with the MERN stack (MongoDB, Express, React, Node). Provides user authentication, persistent notes per user, and a responsive UI to create, read, update, and delete notes. Using tailwind CSS for styling.
 
 
+**Live Demo :-**- [https://mern-notes-app-inr4.onrender.com](https://mern-notes-app-inr4.onrender.com)
+
+
 **Key Features :-**
 - User Authentication: Sign up, log in, and secure note access.
 - CRUD Operations: Create, read, update, and delete notes.  
@@ -85,4 +88,3 @@ A simple CRUD notes application built with the MERN stack (MongoDB, Express, Rea
 - Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
 
-**Live Demo :-**- [https://mern-notes-app-inr4.onrender.com](https://mern-notes-app-inr4.onrender.com)
