@@ -19,6 +19,18 @@ router.post("/register", async (req, res) => {
       return res.status(400).json({ message: "User already exists" });
     }
 
+    const pw = String(password);
+    const complexity = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_\-+=[\]{};:'"\\|,<.>\/?`~]).+$/;
+    if (!complexity.test(pw)) {
+      return res.status(400).json({
+        message: "Password must contain at least one lowercase letter, one uppercase letter, one number and one special character",
+      });
+    }
+
+    if (password && password.length < 8) {
+      return res.status(400).json({ message: "Password must be at least 8 characters" });
+    }
+
     const user = await User.create({ username, email, password });
     const token = generateToken(user._id);
     res.status(201).json({

@@ -35,3 +35,12 @@ userSchema.methods.matchPassword = async function (enteredPassword) {
 const User = mongoose.model("User", userSchema);
 
 export default User;
+
+
+// Validate minimum password length (applies on create or when password is modified)
+User.schema.path("password").validate(function (value) {
+  if (this.isNew || this.isModified("password")) {
+    return typeof value === "string" && value.length >= 6;
+  }
+  return true;
+}, "Password must be at least 6 characters");
