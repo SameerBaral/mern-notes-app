@@ -84,7 +84,7 @@ A simple CRUD notes application built with the MERN stack (MongoDB, Express, Rea
 **Contributing :-**
 - Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
-** Author :-**
+**Author :-**
 - Sameer Baral -
     - GitHub: [https://github.com/SameerBaral](https://github.com/SameerBaral)
 
